@@ -1,5 +1,8 @@
+# code in 'Physics Informed Deep Learning for Transport in Porous Media. Buckley Leverett Problem'
+
 import numpy as np 
 import tensorflow as tf
+
 # Network for QOI (Saturation) as a function of (x,t) 
 def net_saturation(...):
     ... 
@@ -8,6 +11,7 @@ def net_saturation(...):
                             kernel_initializer=tf.contrib.layers.xavier_initializer(), 
                             name=mlp_config.main_name + ’_layer_’ + str(i), reuse=reuse)
     ...
+
 # Network for PDE residual 
 def net_pde_residual(s, x, t): 
     s_t = tf.gradients(s, t)[0] 
